@@ -9,7 +9,7 @@ A custom made Laravel5 package used as the connector to Dreamfactory API
 
 "require": {
             ....
-            "gdce/laravel-dreamfactory":"dev-master"
+            "gdce/framework":"dev-master"
         }
 
 ```
@@ -23,7 +23,8 @@ composer update
 
 ```
 
-GDCE\LaravelDreamfactory\LaravelDreamfactoryServiceProvider::class
+\GDCE\Framework\Auth\CNSWServiceProvider::class
+\GDCE\Framework\LaravelDreamfactory\LaravelDreamfactoryServiceProvider::class
 
 ```
 
@@ -35,7 +36,14 @@ Run the following command to publish the config file
 php artisan vendor:publish
 ```
 
-5- Have fun!
+5- Update config file
+```
+gdce-cnsw-auth.php
+gdce-laravel-df.php
+
+```
+
+7- Have fun!
 
 ## Package dependencies
 

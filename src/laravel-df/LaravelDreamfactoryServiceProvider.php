@@ -19,7 +19,7 @@ class LaravelDreamfactoryServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/laravel-df.php' => config_path('laravel-df.php')
+            __DIR__ . '/config/laravel-df.php' => config_path('gdce-laravel-df.php')
         ], 'laravel-dreamfactory');
     }
 
