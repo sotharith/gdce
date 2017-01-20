@@ -19,7 +19,7 @@ class CNSWServiceProvider extends ServiceProvider {
     public function boot()
     {
         $this->publishes([
-            __DIR__ . '/config/gdce-cnsw-auth.php' => config_path('laravel-df.php')
+            __DIR__ . '/config/gdce-cnsw-auth.php' => config_path('gdce-cnsw-auth.php')
         ], 'gdce-cnsw-auth');
     }
 
