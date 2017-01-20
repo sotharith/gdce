@@ -1,0 +1,36 @@
+{
+    "name": "gdce/framework",
+    "description": "Laravel framework",
+    "keywords": ["laravel", "framework"],
+    "homepage": "http://www.customs.gov.kh",
+    "authors": [
+        {
+            "name": "GDCE Developer",
+            "email": "developer@customs.gov.kh"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9",
+        "illuminate/support": "~5.0",
+        "yajra/laravel-datatables-oracle": "~6.0",
+        "guzzlehttp/guzzle":"~6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.5"
+    },
+    "autoload": {
+       "psr-4": {
+         "GDCE\\": "src/Vendor/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/sotharith/laravel-dreamfactory"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "license": "MIT"
+    
+}
