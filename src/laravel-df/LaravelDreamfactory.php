@@ -81,23 +81,23 @@ class LaravelDreamfactory
 
     public function store($appUri, $data){
         try{
-            return json_decode((string) $this->client->post($appUri,['body'=>json_encode($data)])->getBody(), true)['resource'][0];
+            return json_decode((string) $this->client->post($appUri,['body'=>json_encode(['resource'=>$data])])->getBody(), true)['resource'][0];
         }catch (\Exception $e){
             return false;
         }
     }
 
-    public function update($appUri, $id, $data){
+    public function update($appUri, $data){
         try{
-            return json_decode((string) $this->client->patch($appUri.'/'.$id,['body'=>json_encode($data)])->getBody(), true)['resource'][0];
+            return json_decode((string) $this->client->patch($appUri,['body'=>json_encode(['resource'=>$data])])->getBody(), true)['resource'][0];
         }catch (\Exception $e){
             return false;
         }
     }
 
-    public function destroy($appUri, $id){
+    public function destroy($appUri){
         try{
-            return json_decode((string) $this->client->delete($appUri.'/'.$id)->getBody(), true)['resource'][0];
+            return json_decode((string) $this->client->delete($appUri)->getBody(), true)['resource'][0];
         }catch (\Exception $e){
             return false;
         }
