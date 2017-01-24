@@ -1,6 +1,6 @@
 <?php
 
-namespace GDCE\Framework\LaravelDreamfactory;
+namespace GDCE\Framework\Helper;
 
 /*
  * GDCE customs helper functions
@@ -10,7 +10,7 @@ namespace GDCE\Framework\LaravelDreamfactory;
 
 use Carbon\Carbon;
 
-class GDCE
+class GDCEHelper
 {
     public function val($value, $valueIfNotExist=''){
         return isset($value)?$value:$valueIfNotExist;

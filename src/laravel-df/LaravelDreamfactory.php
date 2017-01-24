@@ -26,16 +26,16 @@ class LaravelDreamfactory
     }
 
     public function connect($dfConnectionString){
-        $this->dfConnection['base_uri'] = config('laravel-df')[$dfConnectionString]['base_uri'];
-        $this->dfConnection['auth_uri'] = config('laravel-df')[$dfConnectionString]['auth_uri'];
-        $this->dfConnection['app_uri'] = config('laravel-df')[$dfConnectionString]['app_uri'];
-        $this->dfConnection['api_key'] = config('laravel-df')[$dfConnectionString]['api_key'];
-        $this->dfConnection['accept'] = config('laravel-df')[$dfConnectionString]['accept'];
-        $this->dfConnection['email'] = config('laravel-df')[$dfConnectionString]['email'];
-        $this->dfConnection['password'] = config('laravel-df')[$dfConnectionString]['password'];
+        $this->dfConnection['base_uri'] = config('gdce-laravel-df')[$dfConnectionString]['base_uri'];
+        $this->dfConnection['auth_uri'] = config('gdce-laravel-df')[$dfConnectionString]['auth_uri'];
+        $this->dfConnection['app_uri'] = config('gdce-laravel-df')[$dfConnectionString]['app_uri'];
+        $this->dfConnection['api_key'] = config('gdce-laravel-df')[$dfConnectionString]['api_key'];
+        $this->dfConnection['accept'] = config('gdce-laravel-df')[$dfConnectionString]['accept'];
+        $this->dfConnection['email'] = config('gdce-laravel-df')[$dfConnectionString]['email'];
+        $this->dfConnection['password'] = config('gdce-laravel-df')[$dfConnectionString]['password'];
 
         //Environment
-        $this->environment = config('laravel-df')['environment'];
+        $this->environment = config('gdce-laravel-df')['environment'];
 
         $this->authenticateDreamfactory();
 
@@ -48,6 +48,7 @@ class LaravelDreamfactory
                 'X-DreamFactory-Session-Token' => $this->authUserSession->session_id
             ]
         ];
+
 
         $this->client =  new Client($this->guzzleOption);
 
