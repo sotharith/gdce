@@ -71,7 +71,8 @@ class LaravelDreamfactory
         $this->authUserSession = json_decode((string) $client->post('',['body'=>json_encode($data)])->getBody());
     }
 
-    public function show($appUri){
+    public function show($table){
+        $appUri = '_table/'.$table;
         try{
             return json_decode((string) $this->client->get($appUri)->getBody(), true)['resource'][0];
         }catch (\Exception $e){
@@ -79,7 +80,8 @@ class LaravelDreamfactory
         }
     }
 
-    public function store($appUri, $data){
+    public function store($table, $data){
+        $appUri = '_table/'.$table;
         try{
             return json_decode((string) $this->client->post($appUri,['body'=>json_encode(['resource'=>$data])])->getBody(), true)['resource'][0];
         }catch (\Exception $e){
@@ -87,7 +89,8 @@ class LaravelDreamfactory
         }
     }
 
-    public function update($appUri, $data){
+    public function update($table, $data){
+        $appUri = '_table/'.$table;
         try{
             return json_decode((string) $this->client->patch($appUri,['body'=>json_encode(['resource'=>$data])])->getBody(), true)['resource'][0];
         }catch (\Exception $e){
@@ -95,7 +98,8 @@ class LaravelDreamfactory
         }
     }
 
-    public function destroy($appUri){
+    public function destroy($table){
+        $appUri = '_table/'.$table;
         try{
             return json_decode((string) $this->client->delete($appUri)->getBody(), true)['resource'][0];
         }catch (\Exception $e){
