@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider;
  *
  * @author: Rémi Collin 
  */
-class CNSWServiceProvider extends ServiceProvider {
+class GDCEServiceProvider extends ServiceProvider {
 
     /**
      * Indicates if loading of the provider is deferred.
