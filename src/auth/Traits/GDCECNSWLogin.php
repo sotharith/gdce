@@ -2,7 +2,7 @@
 
 namespace GDCE\Framework\Auth;
 
-use App\User;
+use App\Models\Access\User\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 
