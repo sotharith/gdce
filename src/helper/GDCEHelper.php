@@ -12,11 +12,11 @@ use Carbon\Carbon;
 
 class GDCEHelper
 {
-    public function val($value, $valueIfNotExist=''){
+    public static function val($value, $valueIfNotExist=''){
         return isset($value)?$value:$valueIfNotExist;
     }
 
-    public function num($val, $precision=2){
+    public static function num($val, $precision=2){
         try{
             return number_format($val, $precision, '.', ',');
         }catch (\Exception $e){
@@ -24,7 +24,7 @@ class GDCEHelper
         }
     }
 
-    public function date($date, $originFormat='Y-m-d H:i:s', $targetFormat='d/m/Y'){
+    public static function date($date, $originFormat='Y-m-d H:i:s', $targetFormat='d/m/Y'){
         try{
             return Carbon::createFromFormat($originFormat,$date)->format($targetFormat);
         }catch (\Exception $e){
