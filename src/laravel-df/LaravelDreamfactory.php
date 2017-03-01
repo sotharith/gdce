@@ -89,6 +89,16 @@ class LaravelDreamfactory
             return false;
         }
     }
+
+    public function updateById($table, $id, $data){
+        $appUri = '_table/'.$table.'/'.$id;
+        try{
+            return json_decode((string) $this->client->put($appUri,['body'=>json_encode($data)])->getBody(), true)['resource'][0];
+        }catch (\Exception $e){
+            return false;
+        }
+    }
+
     public function store($table, $data){
         $appUri = '_table/'.$table;
         try{
