@@ -81,6 +81,14 @@ class LaravelDreamfactory
         }
     }
 
+    public function get($table){
+        $appUri = '_table/'.$table;
+        try{
+            return json_decode((string) $this->client->get($appUri)->getBody(), true)['resource'];
+        }catch (\Exception $e){
+            return false;
+        }
+    }
     public function store($table, $data){
         $appUri = '_table/'.$table;
         try{
