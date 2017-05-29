@@ -24,7 +24,6 @@ composer update
 ```
 
 \GDCE\Framework\Auth\CNSWServiceProvider::class
-\GDCE\Framework\LaravelDreamfactory\LaravelDreamfactoryServiceProvider::class
 
 ```
 
