@@ -1,4 +1,4 @@
-# Laravel 5's Package for Dreamfactory Connector
+# Laravel 5's Package for GDCE
 
 A custom made Laravel5 package used as the connector to Dreamfactory API
 
