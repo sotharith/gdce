@@ -41,13 +41,10 @@ php artisan vendor:publish
 gdce-cnsw-auth.php
 gdce-laravel-df.php
 
-```
+7- Update your route by adding the following line
+Route::get('auth-callback', 'LoginController@auth_callback');
 
-7- Have fun!
+8- Have fun!
 
 ## Package dependencies
-
-```
-"guzzlehttp/guzzle":"~6.0",
-"yajra/laravel-datatables-oracle": "~6.0"
 ```
